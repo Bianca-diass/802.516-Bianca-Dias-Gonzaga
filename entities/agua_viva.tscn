@@ -1,0 +1,189 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/agua_viva.gd" id="1_gd"]
+[ext_resource type="Texture2D" path="res://sprites/agua_viva.png" id="2_tex"]
+
+[sub_resource type="AtlasTexture" id="Aparado_00"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_01"]
+atlas = ExtResource("2_tex")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_02"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_03"]
+atlas = ExtResource("2_tex")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_04"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aandar_10"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aandar_11"]
+atlas = ExtResource("2_tex")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aandar_12"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aandar_13"]
+atlas = ExtResource("2_tex")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aandar_14"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_20"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_21"]
+atlas = ExtResource("2_tex")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_22"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_23"]
+atlas = ExtResource("2_tex")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_24"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_30"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Adano_31"]
+atlas = ExtResource("2_tex")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Amorte_32"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Amorte_33"]
+atlas = ExtResource("2_tex")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Amorte_34"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Amorte_35"]
+atlas = ExtResource("2_tex")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Amorte_36"]
+atlas = ExtResource("2_tex")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jelly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Aparado_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_04")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Aandar_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aandar_11")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aandar_12")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aandar_13")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aandar_14")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Adano_20")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_21")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_22")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_23")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_24")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_30")
+}, {
+"duration": 1.0,
+"texture": SubResource("Adano_31")
+}],
+"loop": false,
+"name": &"dano",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Amorte_32")
+}, {
+"duration": 1.0,
+"texture": SubResource("Amorte_33")
+}, {
+"duration": 1.0,
+"texture": SubResource("Amorte_34")
+}, {
+"duration": 1.0,
+"texture": SubResource("Amorte_35")
+}, {
+"duration": 1.0,
+"texture": SubResource("Amorte_36")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 10.0
+}]
+
+[node name="AguaViva" type="Node2D"]
+script = ExtResource("1_gd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_jelly")
+animation = &"andar"

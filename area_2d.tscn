@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bwt48j82gpwb1"]
+
+[sub_resource type="GDScript" id="GDScript_nsakb"]
+script/source = "extends Area2D
+
+@export var next_level = \"\"
+
+# Called when the node enters the scene tree for the first time.
+func _on_body_entered(body: Node2D) -> void:
+ 	# print (\"passou\").
+	call_deferred(\"load_next_scene\")
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func load_next_scene():
+	print (\"passou\")
+	get_tree().change_scene_to_file(\"res://scenes/\" + next_level + \".tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kauqp"]
+
+[node name="Area2D" type="Area2D" unique_id=881070297]
+collision_layer = 8
+collision_mask = 2
+script = SubResource("GDScript_nsakb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=711390616]
+shape = SubResource("RectangleShape2D_kauqp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

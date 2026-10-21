@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://d0ush1557653u"]
+
+[ext_resource type="Script" uid="uid://bc5mxeuy7p2ga" path="res://scripts/jogador.gd" id="1_m0gj8"]
+[ext_resource type="Texture2D" uid="uid://dkm224owvulqf" path="res://sprites/astronauta_andar.png" id="2_tex"]
+
+[sub_resource type="AtlasTexture" id="At00"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At01"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At02"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At03"]
+atlas = ExtResource("2_tex")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At10"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At11"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At12"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At13"]
+atlas = ExtResource("2_tex")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At20"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At21"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At22"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At23"]
+atlas = ExtResource("2_tex")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At30"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At31"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At32"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="At33"]
+atlas = ExtResource("2_tex")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_astro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("At00")
+}, {
+"duration": 1.0,
+"texture": SubResource("At01")
+}, {
+"duration": 1.0,
+"texture": SubResource("At02")
+}, {
+"duration": 1.0,
+"texture": SubResource("At03")
+}, {
+"duration": 1.0,
+"texture": SubResource("At10")
+}, {
+"duration": 1.0,
+"texture": SubResource("At11")
+}, {
+"duration": 1.0,
+"texture": SubResource("At12")
+}, {
+"duration": 1.0,
+"texture": SubResource("At13")
+}, {
+"duration": 1.0,
+"texture": SubResource("At20")
+}, {
+"duration": 1.0,
+"texture": SubResource("At21")
+}, {
+"duration": 1.0,
+"texture": SubResource("At22")
+}, {
+"duration": 1.0,
+"texture": SubResource("At23")
+}, {
+"duration": 1.0,
+"texture": SubResource("At30")
+}, {
+"duration": 1.0,
+"texture": SubResource("At31")
+}, {
+"duration": 1.0,
+"texture": SubResource("At32")
+}, {
+"duration": 1.0,
+"texture": SubResource("At33")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("At00")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raifr"]
+size = Vector2(10, 6)
+
+[node name="Jogador" type="CharacterBody2D" unique_id=531847301]
+motion_mode = 1
+script = ExtResource("1_m0gj8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1102028035]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_astro")
+animation = &"parado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2023390170]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_raifr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=751304463]
+zoom = Vector2(4, 4)
+limit_left = -153
+limit_top = -87
+limit_right = 807
+limit_bottom = 553
