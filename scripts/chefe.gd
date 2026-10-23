@@ -3,11 +3,13 @@ extends Node2D
 signal morreu
 
 const FILHA := preload("res://entities/agua_viva.tscn")
+const DESVIO := preload("res://scripts/desvio.gd")
 
 @export var vida_max: int = 25
 @export var velocidade: float = 30.0
 @export var dano: int = 1
 @export var raio: float = 38.0
+@export var raio_corpo: float = 24.0   # usado para contornar as pedras
 
 var vida := 0
 var morto := false
@@ -84,6 +86,9 @@ func _physics_process(delta: float) -> void:
 	elif estado == "investida":
 		dir = dir_investida
 		vel = 170.0
+	else:
+		# contorna as pedras no caminho (fora da investida)
+		dir = DESVIO.dirigir(self, dir, raio_corpo)
 
 	# Vira o tubarão na direção do movimento (a imagem original olha para a esquerda)
 	if estado != "aviso":
@@ -93,6 +98,7 @@ func _physics_process(delta: float) -> void:
 
 	global_position += (dir * vel + recuo) * delta
 	recuo = recuo.move_toward(Vector2.ZERO, 200.0 * delta)
+	DESVIO.empurrar_para_fora(self, raio_corpo)
 
 	if global_position.distance_to(alvo.global_position) < raio:
 		alvo.levar_dano(dano)
