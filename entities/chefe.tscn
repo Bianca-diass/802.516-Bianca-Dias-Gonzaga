@@ -1,190 +1,79 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bcqfaul6m1x0o"]
 
-[ext_resource type="Script" path="res://scripts/chefe.gd" id="1_gd"]
-[ext_resource type="Texture2D" path="res://sprites/agua_viva.png" id="2_tex"]
+[ext_resource type="Script" uid="uid://c2qug6l7b6ueb" path="res://scripts/chefe.gd" id="1_gd"]
+[ext_resource type="Texture2D" uid="uid://dokqueoaoggym" path="res://sprites/tubarao.png" id="2_tex"]
 
-[sub_resource type="AtlasTexture" id="Aparado_00"]
+[sub_resource type="AtlasTexture" id="T0"]
 atlas = ExtResource("2_tex")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aparado_01"]
+[sub_resource type="AtlasTexture" id="T1"]
 atlas = ExtResource("2_tex")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aparado_02"]
+[sub_resource type="AtlasTexture" id="T2"]
 atlas = ExtResource("2_tex")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aparado_03"]
+[sub_resource type="AtlasTexture" id="T3"]
 atlas = ExtResource("2_tex")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aparado_04"]
+[sub_resource type="AtlasTexture" id="T4"]
 atlas = ExtResource("2_tex")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aandar_10"]
+[sub_resource type="AtlasTexture" id="T5"]
 atlas = ExtResource("2_tex")
-region = Rect2(0, 32, 32, 32)
+region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aandar_11"]
+[sub_resource type="AtlasTexture" id="T6"]
 atlas = ExtResource("2_tex")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aandar_12"]
+[sub_resource type="AtlasTexture" id="T7"]
 atlas = ExtResource("2_tex")
-region = Rect2(64, 32, 32, 32)
+region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="Aandar_13"]
-atlas = ExtResource("2_tex")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Aandar_14"]
-atlas = ExtResource("2_tex")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_20"]
-atlas = ExtResource("2_tex")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_21"]
-atlas = ExtResource("2_tex")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_22"]
-atlas = ExtResource("2_tex")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_23"]
-atlas = ExtResource("2_tex")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_24"]
-atlas = ExtResource("2_tex")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_30"]
-atlas = ExtResource("2_tex")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Adano_31"]
-atlas = ExtResource("2_tex")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Amorte_32"]
-atlas = ExtResource("2_tex")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Amorte_33"]
-atlas = ExtResource("2_tex")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Amorte_34"]
-atlas = ExtResource("2_tex")
-region = Rect2(128, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Amorte_35"]
-atlas = ExtResource("2_tex")
-region = Rect2(160, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Amorte_36"]
-atlas = ExtResource("2_tex")
-region = Rect2(192, 96, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_chefe"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_tubarao"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("Aparado_00")
+"texture": SubResource("T0")
 }, {
 "duration": 1.0,
-"texture": SubResource("Aparado_01")
+"texture": SubResource("T1")
 }, {
 "duration": 1.0,
-"texture": SubResource("Aparado_02")
+"texture": SubResource("T2")
 }, {
 "duration": 1.0,
-"texture": SubResource("Aparado_03")
+"texture": SubResource("T3")
 }, {
 "duration": 1.0,
-"texture": SubResource("Aparado_04")
+"texture": SubResource("T4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T5")
+}, {
+"duration": 1.0,
+"texture": SubResource("T6")
+}, {
+"duration": 1.0,
+"texture": SubResource("T7")
 }],
-"loop": true,
-"name": &"parado",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("Aandar_10")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aandar_11")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aandar_12")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aandar_13")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aandar_14")
-}],
-"loop": true,
-"name": &"andar",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("Adano_20")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_21")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_22")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_23")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_24")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_30")
-}, {
-"duration": 1.0,
-"texture": SubResource("Adano_31")
-}],
-"loop": false,
-"name": &"dano",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("Amorte_32")
-}, {
-"duration": 1.0,
-"texture": SubResource("Amorte_33")
-}, {
-"duration": 1.0,
-"texture": SubResource("Amorte_34")
-}, {
-"duration": 1.0,
-"texture": SubResource("Amorte_35")
-}, {
-"duration": 1.0,
-"texture": SubResource("Amorte_36")
-}],
-"loop": false,
-"name": &"morte",
-"speed": 8.0
+"loop": 1,
+"name": &"nadar",
+"speed": 10.0
 }]
 
-[node name="Chefe" type="Node2D"]
+[node name="Chefe" type="Node2D" unique_id=1551971225]
 script = ExtResource("1_gd")
+vida_max = 10
+velocidade = 25.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.75, 0.55, 1, 1)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_chefe")
-animation = &"andar"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2075688221]
+position = Vector2(-0.99999994, 0)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_tubarao")
+animation = &"nadar"

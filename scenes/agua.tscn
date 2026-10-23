@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bl5y680xw6ak8" path="res://scenes/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="1_wrhic"]
 [ext_resource type="PackedScene" uid="uid://d0ush1557653u" path="res://entities/jogador.tscn" id="2_astc6"]
-[ext_resource type="Texture2D" uid="uid://24twlqe3ppuw" path="res://sprites/fundo_aquario.png" id="3_astc6"]
+[ext_resource type="Texture2D" uid="uid://c5i6qb5b2tde0" path="res://sprites/fundo_aquario.jpg" id="2_pqq6q"]
 [ext_resource type="Script" uid="uid://cexf0dkjgttfm" path="res://scripts/ondas.gd" id="4_pqq6q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_notw7"]
@@ -25,12 +25,14 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAEAAAABAAE
 tile_set = SubResource("TileSet_kauqp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=824919962]
-position = Vector2(304.99997, 160)
-scale = Vector2(0.6374999, 0.54982823)
-texture = ExtResource("3_astc6")
+position = Vector2(303.50003, 159.5)
+scale = Vector2(0.46009034, 0.40375003)
+texture = ExtResource("2_pqq6q")
 
 [node name="Jogador" parent="." unique_id=393206386 instance=ExtResource("2_astc6")]
 position = Vector2(291, 156)
+vida_max = 10
 
 [node name="Ondas" type="Node" parent="." unique_id=1600736974]
 script = ExtResource("4_pqq6q")
+duracao = 15.0

@@ -1,5 +1,9 @@
 extends Node2D
 
+const ITEM_CURA := preload("res://scripts/item_cura.gd")
+
+@export var chance_cura: float = 0.25   # 0.25 = 25% de soltar um coração
+
 @export var velocidade: float = 35.0
 @export var vida: int = 2
 @export var dano: int = 1
@@ -35,6 +39,7 @@ func levar_dano(qtd: int, de: Vector2) -> void:
 	if vida <= 0:
 		morto = true
 		anim.play("morte")
+		_soltar_item()
 		return
 	recuo = (global_position - de).normalized() * 120.0
 	anim.play("dano")
@@ -44,3 +49,11 @@ func _ao_terminar_animacao() -> void:
 		queue_free()
 	else:
 		anim.play("andar")
+
+func _soltar_item() -> void:
+	if randf() > chance_cura:
+		return
+	var item := Node2D.new()
+	item.set_script(ITEM_CURA)
+	get_parent().add_child(item)
+	item.global_position = global_position

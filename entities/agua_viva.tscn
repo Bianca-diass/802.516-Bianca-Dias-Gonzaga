@@ -1,27 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://b5lwxpne18qw7"]
 
-[ext_resource type="Script" path="res://scripts/agua_viva.gd" id="1_gd"]
-[ext_resource type="Texture2D" path="res://sprites/agua_viva.png" id="2_tex"]
-
-[sub_resource type="AtlasTexture" id="Aparado_00"]
-atlas = ExtResource("2_tex")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Aparado_01"]
-atlas = ExtResource("2_tex")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Aparado_02"]
-atlas = ExtResource("2_tex")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Aparado_03"]
-atlas = ExtResource("2_tex")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="Aparado_04"]
-atlas = ExtResource("2_tex")
-region = Rect2(128, 0, 32, 32)
+[ext_resource type="Script" uid="uid://idihrq7oujvj" path="res://scripts/agua_viva.gd" id="1_gd"]
+[ext_resource type="Texture2D" uid="uid://bq75e8dgdv8v6" path="res://sprites/agua_viva.png" id="2_tex"]
 
 [sub_resource type="AtlasTexture" id="Aandar_10"]
 atlas = ExtResource("2_tex")
@@ -91,28 +71,28 @@ region = Rect2(160, 96, 32, 32)
 atlas = ExtResource("2_tex")
 region = Rect2(192, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="Aparado_00"]
+atlas = ExtResource("2_tex")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_01"]
+atlas = ExtResource("2_tex")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_02"]
+atlas = ExtResource("2_tex")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_03"]
+atlas = ExtResource("2_tex")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Aparado_04"]
+atlas = ExtResource("2_tex")
+region = Rect2(128, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jelly"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("Aparado_00")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aparado_01")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aparado_02")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aparado_03")
-}, {
-"duration": 1.0,
-"texture": SubResource("Aparado_04")
-}],
-"loop": true,
-"name": &"parado",
-"speed": 6.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("Aandar_10")
@@ -129,7 +109,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("Aandar_14")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andar",
 "speed": 8.0
 }, {
@@ -155,7 +135,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("Adano_31")
 }],
-"loop": false,
+"loop": 0,
 "name": &"dano",
 "speed": 14.0
 }, {
@@ -175,15 +155,37 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("Amorte_36")
 }],
-"loop": false,
+"loop": 0,
 "name": &"morte",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Aparado_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("Aparado_04")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 6.0
 }]
 
-[node name="AguaViva" type="Node2D"]
+[node name="AguaViva" type="Node2D" unique_id=1947102738]
 script = ExtResource("1_gd")
+chance_cura = 1.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=525051929]
 z_index = 1
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_jelly")
 animation = &"andar"

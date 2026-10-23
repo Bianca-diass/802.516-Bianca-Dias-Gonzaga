@@ -72,11 +72,22 @@ func levar_dano(qtd: int) -> void:
 	invulneravel = true
 	anim.modulate = Color(1, 0.3, 0.3)
 	if vida <= 0:
+		hud.text = "DERROTA! Tentando de novo..."
+		set_physics_process(false)
+		await get_tree().create_timer(2.0).timeout
 		get_tree().reload_current_scene()
 		return
 	await get_tree().create_timer(1.0).timeout
 	anim.modulate = cor_original
 	invulneravel = false
+
+func curar(qtd: int) -> bool:
+	# devolve false se não precisou (vida cheia), para o item não ser gasto à toa
+	if vida >= vida_max or vida <= 0:
+		return false
+	vida = mini(vida + qtd, vida_max)
+	_atualizar_hud()
+	return true
 
 func _atualizar_hud() -> void:
 	hud.text = "Vida: %d/%d" % [vida, vida_max]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvf7e6e162l5n"
-path="res://.godot/imported/personagem.png-a6629aabfbdefb924752dfdcf5c1cfea.ctex"
+uid="uid://dokqueoaoggym"
+path="res://.godot/imported/tubarao.png-5beb4fb5ebad70359bbb192ac8a4d3db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/personagem.png"
-dest_files=["res://.godot/imported/personagem.png-a6629aabfbdefb924752dfdcf5c1cfea.ctex"]
+source_file="res://sprites/tubarao.png"
+dest_files=["res://.godot/imported/tubarao.png-5beb4fb5ebad70359bbb192ac8a4d3db.ctex"]
 
 [params]
 

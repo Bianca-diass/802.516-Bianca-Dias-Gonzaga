@@ -137,19 +137,20 @@ size = Vector2(10, 6)
 [node name="Jogador" type="CharacterBody2D" unique_id=531847301]
 motion_mode = 1
 script = ExtResource("1_m0gj8")
+velocidade = 75.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1102028035]
 z_index = 1
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_astro")
 animation = &"parado"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2023390170]
 position = Vector2(0, 6)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_raifr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=751304463]
-zoom = Vector2(4, 4)
+zoom = Vector2(3.5, 3.5)
 limit_left = -153
 limit_top = -87
 limit_right = 807
