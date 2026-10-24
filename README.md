@@ -5,7 +5,7 @@
 - **Tema:** Aquário gigante com águas-vivas soltas
 - **Tipo:** Chefe — resistir às ondas até o chefe surgir e derrotá-lo
 - **Modo:** 2D, um jogador
-- **Repositório:** _(cole aqui o link do GitHub)_
+- **Repositório:** 
 
 Jogo 2D feito na Godot 4.7 com o renderizador Compatibility. Um astronauta fica preso dentro de um aquário gigante e precisa sobreviver às ondas de águas-vivas. Quando o tempo das ondas acaba, um tubarão gigante aparece, e o astronauta precisa derrotá-lo.
 

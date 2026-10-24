@@ -20,6 +20,7 @@ var proxima_onda := 0.0
 var onda := 0
 var acabou := false
 var label: Label
+var fps_label: Label
 
 func _ready() -> void:
 	var camada := CanvasLayer.new()
@@ -27,9 +28,21 @@ func _ready() -> void:
 	label.position = Vector2(8, 40)
 	label.add_theme_font_size_override("font_size", 24)
 	camada.add_child(label)
+	fps_label = Label.new()
+	fps_label.position = Vector2(8, 72)
+	fps_label.add_theme_font_size_override("font_size", 16)
+	camada.add_child(fps_label)
 	add_child(camada)
 	chefe_chegou.connect(_spawnar_chefe)
 	_criar_obstaculos()
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Teste de desempenho: F2 cria 50 águas-vivas de uma vez
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F2:
+		for i in 50:
+			var j = AGUA_VIVA.instantiate()
+			get_parent().add_child(j)
+			j.global_position = _ponto_de_spawn()
 
 func _criar_obstaculos() -> void:
 	for p in posicoes_obstaculos:
@@ -39,6 +52,8 @@ func _criar_obstaculos() -> void:
 		get_parent().add_child.call_deferred(o)
 
 func _process(delta: float) -> void:
+	fps_label.text = "FPS: %d  |  Inimigos: %d  |  T: +50 águas-vivas (teste)" % [
+		Engine.get_frames_per_second(), get_tree().get_nodes_in_group("inimigos").size()]
 	if acabou:
 		return
 	tempo += delta
