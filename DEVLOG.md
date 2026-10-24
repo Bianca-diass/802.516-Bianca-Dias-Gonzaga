@@ -30,10 +30,6 @@ O código do chefe, das ondas, da vitória e da derrota e do item de cura foi fe
 
 O que fiz: coloquei 6 pedras na arena, e os inimigos agora contornam elas. A água-viva ganhou 4 estados: perseguindo, contornando, atordoada (0,4 s depois de levar um golpe) e morrendo. O tubarão também desvia das pedras, menos na investida. O desvio fica no desvio.gd, usado pelos dois. Também corrigi a área das ondas, que deixava as águas-vivas nascerem fora das paredes.
 
-O que travou: nada.
-
-Como resolvi: não precisei.
-
 O que travou: nada grave. Substituí os scripts, conferi que o agua_viva.gd continuava ligado ao nó AguaViva e o jogo rodou. (Se algo travou de verdade, escreva aqui.)
 
 Como resolvi: testei com F6 e vi as águas-vivas contornando as pedras e o tubarão desviando.
