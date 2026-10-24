@@ -138,6 +138,7 @@ size = Vector2(10, 6)
 motion_mode = 1
 script = ExtResource("1_m0gj8")
 velocidade = 75.0
+vida_max = 999
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1102028035]
 z_index = 1

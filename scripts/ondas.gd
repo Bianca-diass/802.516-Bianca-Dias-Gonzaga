@@ -37,8 +37,8 @@ func _ready() -> void:
 	_criar_obstaculos()
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Teste de desempenho: F2 cria 50 águas-vivas de uma vez
-	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F2:
+	# Teste de desempenho: T cria 50 águas-vivas de uma vez
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_T:
 		for i in 50:
 			var j = AGUA_VIVA.instantiate()
 			get_parent().add_child(j)
