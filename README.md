@@ -2,7 +2,7 @@
 
 802.516 — Bianca Dias Gonzaga
 
-Tema: Aquário com águas-vivas e tubarão gigante.
+Tema: Aquário Gigante com águas-vivas 
 
 Tipo: Jogo 2D de sobrevivência contra chefe.
 
