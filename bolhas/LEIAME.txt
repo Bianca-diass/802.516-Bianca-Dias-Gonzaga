@@ -1,0 +1,12 @@
+BOLHAS - pixel art (criadas para o trabalho Agua Viva)
+Livres para uso, sem necessidade de credito.
+
+bolha_pequena_8.png / bolha_media_16.png / bolha_grande_32.png / bolha_gigante_64.png
+  -> bolhas individuais, fundo transparente.
+bolha_estourando_6quadros_32x32.png
+  -> sprite sheet de estourar: 6 quadros de 32x32 lado a lado.
+     No AnimatedSprite2D: Add Frames > From Sprite Sheet > Horizontal 6, Vertical 1.
+bolhas.tscn
+  -> particulas de bolhas subindo. Copie a pasta 'bolhas' inteira para a raiz do projeto
+     (res://bolhas/), depois arraste bolhas.tscn para a sua cena.
+Dica: no import das imagens, use Filter = Nearest para manter o pixel art nitido.

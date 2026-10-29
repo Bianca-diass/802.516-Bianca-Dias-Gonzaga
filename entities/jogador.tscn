@@ -151,8 +151,7 @@ scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_raifr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=751304463]
-zoom = Vector2(3.5, 3.5)
-limit_left = -153
-limit_top = -87
-limit_right = 807
-limit_bottom = 553
+limit_left = 0
+limit_top = 0
+limit_right = 608
+limit_bottom = 320
